@@ -16,6 +16,7 @@ class App extends React.Component {
   }
 
   onChangeType = (event) => {
+    console.log(event.target.value)
     this.setState({
       filters: {
         type: event.target.value
@@ -26,8 +27,8 @@ class App extends React.Component {
   onFindPetsClick = () => {
     console.log(this.state.filters.type)
     debugger;
-    // if (this.state.filters.type === 'all')
-    // return fetch(`/api/pets`)
+     if (this.state.filters.type === 'all')
+      return fetch(`/api/pets`)
     // if (this.state.filters.type !== 'all') 
     // return fetch(`/api/pets?type=${this.state.filters.type}`)
   }
