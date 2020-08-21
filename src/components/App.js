@@ -26,11 +26,16 @@ class App extends React.Component {
 
   onFindPetsClick = () => {
     console.log(this.state.filters.type)
-    debugger;
-     if (this.state.filters.type === 'all')
-      return fetch(`/api/pets`)
-    // if (this.state.filters.type !== 'all') 
-    // return fetch(`/api/pets?type=${this.state.filters.type}`)
+    
+    if (this.state.filters.type === 'all')
+      fetch(`/api/pets`)
+      debugger;
+    if (this.state.filters.type !== 'all') 
+      fetch(`/api/pets?type=${this.state.filters.type}`)
+  }
+
+  onAdoptPet = () => {
+  console.log()
   }
 
   render() {
@@ -47,7 +52,9 @@ class App extends React.Component {
               onClick={this.onFindPetsClick}/>
             </div>
             <div className="twelve wide column">
-              <PetBrowser />
+              <PetBrowser 
+              onClick={this.onAdoptPet}
+              />
             </div>
           </div>
         </div>
