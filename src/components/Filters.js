@@ -4,11 +4,13 @@ class Filters extends React.Component {
 
   pickPet = (event) => {
     // event.preventDefault();
+    //same as below, except this is when the user changes the animal type
     this.props.onChangeType(event)
   }
   
   searchFor = () => {
-    
+    //when button is clicked it routes to here
+    //which then routes to the parent components property function
     // event.preventDefault();
     this.props.onFindPetsClick()
     // this.props.onClick
