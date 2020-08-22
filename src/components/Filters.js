@@ -4,13 +4,13 @@ class Filters extends React.Component {
 
   pickPet = (event) => {
     // event.preventDefault();
-    this.props.onChange(event)
+    this.props.onChangeType(event)
   }
   
   searchFor = () => {
     
     // event.preventDefault();
-    this.props.onClick()
+    this.props.onFindPetsClick()
     // this.props.onClick
   }
 
